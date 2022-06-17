@@ -129,10 +129,20 @@ footer p {
 #kopiryt {
     text-align: center;
     font-size: 11px;
-    width: 100%;
+}
+
+#kopiryt a {
+    display: inline;
 }
 
 @media only screen and (min-width: 1000px) {
+    header {
+    width: 100%;
+    background-image: url("images/bg-hero-desktop.svg");
+    padding: 20px 20px;
+    margin-bottom: 25px;
+    }
+
     nav {
         padding: 0 100px 0 70px;
     }
@@ -191,8 +201,53 @@ footer p {
     border-radius: 10px;
     box-shadow: 4px 2px 20px 0 rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 50%;
+    width: 40%;
+    }
+
+    .footer_info {
+        width: 100%;
+    }
+
+    #bottom_logo {
+    width: 200px;
+    height: 60px;
+    padding-left: 50px;
 }
+
+    .box {
+        float: left;
+        width: 33.33%;
+        padding: 50px;
+    }
+
+    .footer_info::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    #footer_nav {
+        padding-top: 80px;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(2, auto);
+        column-gap: 30px;
+    }
+
+    #loc {
+    padding-top: 35px;
+    }
+
+    #kopiryt {
+        padding-top: 85px;
+    }
+
+    #bottom_logo {
+    width: 200px;
+    height: 60px;
+    padding-left: 50px;
+}
+
 
 
 
