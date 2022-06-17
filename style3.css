@@ -4,8 +4,16 @@
     list-style: none;
 }
 
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
 p, h3 {
     margin: 10px 0;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
 }
 
 header {
@@ -47,6 +55,7 @@ nav::after {
 .first h2 {
     padding: 10px 20px 0;
     line-height: 1.3em;
+    font-family: 'Poppins', sans-serif;
 }
 
 .first p {
@@ -247,8 +256,5 @@ footer p {
     height: 60px;
     padding-left: 50px;
 }
-
-
-
 
 }
