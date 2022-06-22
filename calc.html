@@ -7,6 +7,39 @@
     <title>Js Calculator</title>
 </head>
 <body>
-    <script src="cal.js"></script>
+    <script>
+    // this is a simple js calculator without html or css
+
+// declaring the variables & cast it in js syntax
+
+const op = prompt("Enter what operation you would like to do (use *, /, + or -): "),
+num1 = parseFloat(prompt("Enter first number: ")),
+num2 = parseFloat(prompt("Enter second number: "));
+let result;
+
+// the calculation using a conditional statement
+if (op === "+") {
+    result = num1 + num2;
+}
+
+else if (op === "-") {
+    result = num1 - num2;
+}
+
+else if (op === "/") {
+    result = num1 / num2;
+}
+
+else if (op === "*") {
+    result = num1 * num2;
+}
+
+else {
+    result = "Invalid Input"
+}
+
+alert(result);
+
+    </script>
 </body>
 </html>
