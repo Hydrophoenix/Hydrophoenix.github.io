@@ -1,128 +1,145 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link href="user-styl.css" rel="stylesheet">
-    <title>Log In</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'landing//css/style.css' %}">
+<script defer src="{% static 'landing/javascript/main.js' %}"></script>
+    <title>Login Page</title>
 </head>
 <body>
-    <header>
-        <div class="col-2">
-        <img id="logo" src="images\splita_logo.svg" alt="splita_logo">
-        </div>
+    <nav class="navbar">
+        <div id="menu"><img src="{% static 'landing/images/menu.png' %}"alt=""></div>
+<div class="logo"><img src="{% static 'landing/images/logo.svg' %}"alt="">
+</div>
+<div id="home">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact Us</a>
+</div>
+<div class="nav-btn"><a href="login.html" ><p id="nav-text1">Login</p></a>
+    <button id="nav-btn2"><a href="signup.html"><p id="nav-text2">SIGN UP</p></a></button></div>
+    </nav>
+    <div id="sidebar">
+        <button id="close"><img src="{% static 'landing/images/close2.png' %}" alt="close" style="width: 1rem; height:1rem;"></button>
+        <ul>
+            <li>
+    <a href="#">Home</a>
+            </li>
+            <li>
+    <a href="#">About</a>
+            </li>
+            <li>
+    <a href="#">Contact Us</a>
+            </li>
+            <li>
+                <a href="#">Sign Up</a>
+                        </li>
+                        <li>
+                            <a href="#">Login</a>
+                                    </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="picture"><img src="{% static 'landing/images/persons.svg' %}" alt="" id="img"></div>
+        <div class="form">
+            <h2 id="login-title">Log In</h2>
+            <h3>Welcome</h3>
+            <p id="login1">Log in to get started</p>
+            <form action="">
+               <table>
+                <tr>
+                    <td>
+                        <input type="email" placeholder="Email Address" class="inp" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="password" placeholder="Password" class="inp" required>
 
-        <div class="col-6 center_txt top-nav-box">
-        <a class="top-nav" href="">Home</a>
-        <a class="top-nav" href="">About</a>
-        <a class="top-nav" href="">Contact Us</a>
-        </div>
-
-        <div class="col-4 center_txt top-nav-box">
-        <a class="fin-sect" id="blue-txt" href="">Log In</a>
-        <a href="signup.html"><button type="button" class="nav-btn" id="signup-btn">SIGN UP</button></a>
-        </div>
-    </header>
-<!-- End of header and start of main-->
-    <main>
-        <section class="row" id="signup_pg_main">
-        <!-- Sign Up side image-->
-            <div class="col-7">
-                <img  class="center_item" id="login_img" src="images\login_img.svg" alt="signup_img">
-            </div>
-        <!-- Sign Up Form-->
-            <div class="col-5 side-pad">
-                <h1 class="center_txt">Log In</h1>
-                <div>
-                    <span><b>Welcome</b></span><br>
-                    <span class="small-txt">Log in to get started</span>
+                    </td>
+                </tr>
+               </table>
+                <div class="saved"><div class="remember">
+                    <input type="checkbox" name="remember" value=" remember-me">
+                    <label for="remember">Remember me</label>
                 </div>
-
-                <form action="">
-                    <input type="email" name="email" id="email" placeholder="Email address"><br/>
-                    <input type="password" name="password" id="password" placeholder="Password"><br/>
-                    <span class="col-6 no-pad small-txt">
-                    <input type="checkbox" name="user_reminder" id="user_reminder">
-                    <label for="user_reminder">Remember me</label></span>
-                    <a class="col-6 no-pad small-txt" id="r-txt" href="">Forgot Password</a><br><br>
-                    <input type="submit" value="Log in">
-                </form>
-                <div class="below_form">
-                    <h4 id="or-styl"><span>OR</span><h4>
-                    <h4 class="center_txt">Log in with</h4>
-                    <a href=""><button type="button" class="btn"><img src="images\google_logo.svg" alt="google_logo"> Google</button></a>
-                    <a href=""><button type="button" class="btn"><img src="images\github_logo.svg" alt="github_logo"> Github</button></a>
-
-                    <span class="small-txt">Don't have an account? <a href="login.html">Sign up</a></span>
-
-                </div>
-
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="row side-pad1">
-            <div class="col-12 row">
-                <img class="r_float fin-sect" src="images\linkedin_logo.svg" alt="linkedin_logo">
-                <img class="r_float fin-sect" src="images\twitter_logo.svg" alt="twitter_logo">
-                <img class="r_float fin-sect"
-                src="images\instagram_logo.svg" alt="instagram_logo">
-
+            <a href="#" id="forgot">Forgot Password</a>
             </div>
 
-            <div class="col-12">
-                <img src="images\splita_logof.svg" alt="signup_img">
-            </div>
+            <button id="btn">Log In</button>
 
-            <div class="col-12">
-                <form class="nosubmit col-5">
-                    <input class="nosubmit" type="search" placeholder="Search">
-                </form>
+            </form>
+            <div class="or-style">
+                <div class="line"></div>
+                <h4>OR</h4>
+                <div class="line"></div>
             </div>
+            <p id="login2">Login With</p>
+           <div class="btns">
+            <button class="site"><div class="logos"><img src="{% static 'landing/images/flat-color-icons_google.svg' %}" alt="" style="width: 25px; height:25px; background-color:white"><a href="#"><p id="google">Google</p></a></div></button>
+            <button class="site"><div class="logos"><img src="{% static 'landing/images/github.svg' %}" alt="" style="width: 30px; height:30px; background-color:white"><a href="#"><p id="github">Github</p></a></div></button>
+           </div>
 
-            <div class="small-txt">
-            <ul class="col-3">
-                <li><a href="">Products</a></li>
-                <li><a href="">Enrichments</a></li>
-                <li><a href="">Use cases</a></li>
-            </ul>
-            <ul class="col-3">
-                <li><a href="">FAQs</a></li>
-                <li><a href="">Services</a></li>
-            </ul>
-            <ul class="col-3">
-                <li><a href="">About</a></li>
-                <li><a href="">Contact Us</a></li>
-                <li><a href="">How to</a></li>
-                <li><a href="">Storage</a></li>
-            </ul>
-            <ul class="col-3">
-                <li><a href="">Blog</a></li>
-                <li><a href="">Data Community</a></li>
-                <li><a href="">Video demos</a></li>
-                <li><a href="">Support</a></li>
-            </ul>
-            </div>
-            <p class="col-12 small-txt">
-                <span>Address</span><br/>
-                <span>Lagos, Nigeria</span><br/>
-                <span>Phone: +234 903 426 3462</span><br/>
-                <span>Email: info@splita.com</span>
-            </p>
+            <p>Don't have an account?  <a href="#" id="signup"> Sign up</a></p>
         </div>
-        <div class="col-12 footer-2 small-txt">
-            <span class="col-9" id="last-span">
-                <a class="fin-sect" href="">Privacy</a>
-                <a class="fin-sect" href="">Security</a>
-                <a class="fin-sect" href="">Terms of use</a>
-            </span>
-            <span class="col-3 center_txt">2022 Splita, INC</span>
+    </div>
+    <div class="footer">
+        <div class="footer-logo">
+            <img src="{% static 'landing/images/logo2.svg' %}" alt="">
+            <div class="home">
+                <a href="#"><img src="{% static 'landing/images/Frame 137.svg' %}" alt=""></a>
+                <a href="#"><img src="{% static 'landing/images/Frame 138.svg' %}" alt=""></a>
+                <a href="#"><img src="{% static 'landing/images/Frame 139.svg' %}" alt=""></a>
+            </div>
         </div>
-    </footer>
+        <div class="con">
+            <input type="text" />
+            <img src="{% static 'landing/images/Vector.svg' %}" />
+        </div>
+        <div class="list">
+            <ul>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Enrichments</a></li>
+                <li><a href="#">Use cases</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">FAQ's</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">How to</a></li>
+                <li><a href="#">Storage</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Data Community</a></li>
+                <li><a href="#">Video Demos</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+        <div id="address">
+            <strong>Address</strong>
+            <p>Lagos, Nigeria</p>
+            <p>Phone  +234 903 426 3462</p>
+            <p>Email  info@splita.com</p>
+        </div>
+    </div>
+    <div id="others">
+        <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Term of use</a></li>
+        </ul>
+        <p>2022 Splita, INC</p>
+    </div>
 </body>
 </html>

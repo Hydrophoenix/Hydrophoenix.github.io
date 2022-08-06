@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link href="user-styl2.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="user-styl2.css">
     <script defer src="javascript\splita_js.js"></script>
-    <title>Sign Up</title>
+    <title>About Us</title>
 </head>
-
 <body>
-    <header>
+     <header>
         <!--Mobile menu icon with js-->
         <span id="menu_icon" onclick="menudrop()"><img src="images\menu-icon.svg" alt=""></span>
 
@@ -41,46 +39,40 @@
         </div>
 
     </header>
+<main>
+    <div class="row">
+        <div class="col-12 box-img">
+            <img src="images/about_us-img.svg" alt="about_us-img">
+        </div>
+        <div class="col-12 center-txt">
+            <h3>Welcome To Splita</h3>
+            A reputable platform designed to help break your large CSV and JSON files into smaller bits
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 blue-bg">
+            <h3 class="center-txt">About Us</h3>
+        </div>
+        <div class="col-12">
+            Splita has been helping developers and data analysts who struggle with processing their large CSV and JSON files by providing a secure, user-friendly and timely way to split their large files into smaller chunks within 3 - 4 minutes. We also store already chunked data on the splita platform for safekeeping and future use.<br>
+            Our goal is to improve data handling / transfer process and ensure that our users have stress free experience while using our platform.
+        </div>
+    </div>
 
-    <main>
-        <section class="row" id="signup_pg_main">
-            <div class="col-12 landing_first col-td-6">
-                <img id="signup_img" src="images/signup_img.svg" alt="signup_img">
-            </div>
-        <!-- Sign Up Form-->
-            <div class="col-12 col-td-6">
-                <h1 class="center-txt">Sign Up</h1>
-                <div>
-                    <span class="signup-form"><b>Hello there</b></span><br>
-                    <span class="small-txt signup-form"><b>Create an account to get started</b></span>
-                </div>
+    <div class="row">
+    <h5 class="center-txt">Trusted by renowned companies</h5>
+    <span class="col-12" id="collab_logo">
+        <img src="images/apple-logo.svg" alt="">
+        <img src="images/meta.svg" alt="">
+        <img src="images/microsoft.svg" alt="">
+        <img src="images/github.svg" alt="">
+        <img src="images/amazon.svg" alt="">
+    </span>
+    </div>
 
-                <form action="">
-                    <input type="text" name="fullname" id="fullname" placeholder="Full name"><br/>
-                    <input type="email" name="email" id="email" placeholder="Email address"><br/>
-                    <input type="password" name="password" id="password" placeholder="Password"><br/>
-                    <input type="submit" value="Sign up">
-                </form>
-                <div class="below_form">
-                    <h4 id="or-styl"><span>OR</span><h4>
-                    <h4 class="center-txt">Sign up with</h4>
+</main>
 
-                    <a href=""><button type="button" class="btn btn2">
-                        <span><img src="images/google_logo.svg" alt="google_logo"></span>    <span>Google</span>
-                    </button></a>
-                    <a href=""><button type="button" class="btn btn2">
-                        <span><img src="images/github_logo.svg" alt="github_logo"></span> <span>Github</span>
-                    </button></a>
-
-                    <span class="small-txt">Already have an account? <a href="login.html">Log in</a></span>
-
-                </div>
-
-            </div>
-        </section>
-    </main>
-
-    <footer>
+     <footer>
 
         <div class="row">
             <div class="col-12">
@@ -107,7 +99,7 @@
             </span>
 
             <span class="col-4 small-txt menu_link2 col-td-3">
-                <a href="">About</a>
+                <a href="about_us.html">About</a>
                 <a href="">Contact Us</a>
                 <a href="">Support</a>
                 <a href="">FAQs</a>
